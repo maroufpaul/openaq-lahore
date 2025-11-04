@@ -1,0 +1,55 @@
+########################
+# Python / env stuff
+########################
+# virtual environments
+.venv/
+venv/
+env/
+
+# bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+########################
+# Editors / OS
+########################
+.vscode/
+.idea/
+*.code-workspace
+
+.DS_Store
+Thumbs.db
+
+########################
+# Jupyter / Quarto artefacts
+########################
+.ipynb_checkpoints/
+
+########################
+# QGIS / GIS helper files
+########################
+# auxiliary files created next to rasters
+*.aux.xml
+
+# backup project files
+*.qgs~
+*.qgz~
+
+########################
+# Project-specific data
+########################
+# 1) Raw sensor CSVs from OpenAQ (can be re-downloaded)
+data/sensors/raw/
+
+# 2) Heavy worldpop / raster products
+data/worldpop/pak_ppp_2020_1km_Aggregated_UNadj.tif
+data/worldpop/population_lahore_cells.gpkg
+data/worldpop/population_lahore_centroids.gpkg
+data/worldpop/population_lahore_centroids_utm.gpkg
+data/worldpop/population_lahore_clipped.tif
+data/worldpop/population_pm25_exposure.gpkg
+
+# 3) Outputs that can be regenerated from code
+outputs/

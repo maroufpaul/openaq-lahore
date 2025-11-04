@@ -1,0 +1,16 @@
+geopandas
+shapely
+pyproj
+rasterio
+rasterstats
+rioxarray
+pandas
+numpy
+scipy
+scikit-learn
+pulp
+folium
+pyogrio
+openpyxl
+fiona
+
