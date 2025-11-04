@@ -1,0 +1,67 @@
+BEGIN;
+
+        CREATE: EXPO(24): MARK(1);
+	BRANCH, 1: WITH, 1/6, 1: 
+		   WITH, 1/6, 2: 
+		   WITH, 1/6, 3: 
+		   WITH, 1/6, 4: 
+		   WITH, 1/6, 5: 
+		   WITH, 1/6, 6;
+
+1 	ASSIGN: Region = 1;
+	BRANCH, 1: IF, NR(SensorA)<1, A: ELSE, Stay1;
+Stay1   COUNT: Undetect1;
+	DISPOSE;
+
+2 	ASSIGN: Region = 2;
+	BRANCH, 1: IF, NR(SensorA)<1, A: IF, NR(SensorA)==1.and.NR(SensorB)<1, B:ELSE, Stay2;
+Stay2   COUNT: Undetect2;
+	DISPOSE; 
+
+3 	ASSIGN: Region = 3;
+	BRANCH, 1: IF, NR(SensorB)<1, B: ELSE, Stay3;
+Stay3   COUNT: Undetect3;
+	DISPOSE; 
+
+4 	ASSIGN: Region = 4;
+	BRANCH, 1: IF, NR(SensorA)<1, A: IF, NR(SensorA)==1.and.NR(SensorC)<1, C:ELSE, Stay4;
+Stay4   COUNT: Undetect4;
+	DISPOSE; 
+
+5 	ASSIGN: Region = 5;
+	BRANCH, 1: IF, NR(SensorC)<1, C: ELSE, Stay5;
+Stay5   COUNT: Undetect5;
+	DISPOSE; 
+
+6 	ASSIGN: Region = 6;
+	BRANCH, 1: IF, NR(SensorB)<1, B: IF, NR(SensorB)==1.and.NR(SensorC)<1, C:ELSE, Stay6;
+Stay6   COUNT: Undetect1;
+	DISPOSE; 
+
+A 	SEIZE: SensorA;
+	Delay: 1/60;
+	RELEASE: SensorA;
+	COUNT: DetectA;
+	DISPOSE; 
+
+B 	SEIZE: SensorB;
+	Delay: 1/60;
+	RELEASE: SensorB;
+	COUNT: DetectB;
+	DISPOSE; 
+
+C 	SEIZE: SensorC;
+	Delay: 1/60;
+	RELEASE: SensorC;
+	COUNT: DetectC;
+	DISPOSE; 
+
+
+
+
+
+
+
+
+
+

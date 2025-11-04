@@ -31,6 +31,14 @@ OPENAQ-LAHORE/
 │   ├── site_ranking.gpkg       # Ranked candidate grid (for QGIS visualization)
 │   └── top10_sites.gpkg        # Top 10 optimal locations
 │
+│── Rcode/                    # Joyce Rcode
+│   ├── grid_lahore_matrix.R
+│   └── lahore_pop_1km.R
+│
+│── SIMAN/                    # Joyce Siman
+│   ├── Sensor Exp.txt        # example siman exp file 
+│   └── Sensor Model.txt      # example siman Mod file 
+│
 ├── src/                        # Core scripts
 │   ├── aggregate_sensor_timeseries.py
 │   ├── prepare_sensors.py

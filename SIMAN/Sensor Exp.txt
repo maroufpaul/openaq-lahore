@@ -1,0 +1,8 @@
+BEGIN;
+PROJECT, "Sensor", "Joyce";
+ATTRIBUTES: Region;  
+DISCRETE, 5000;
+RESOURCES: SensorA, 1: SensorB, 1: SensorC, 1;
+COUNTERS: Undetect1: Undetect2: Undetect3: Undetect4: Undetect5: DetectA: DetectB: DetectC: RepairA: RepairB: RepairC;
+TRACE, 50, 100, , ;
+REPLICATE, 1, 0, 720, YES, YES, , , , ,;
